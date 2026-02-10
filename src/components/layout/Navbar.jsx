@@ -74,8 +74,16 @@ const Navbar = () => {
                                 animate={{ x: 0 }}
                                 exit={{ x: '100%' }}
                                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                className="fixed inset-y-0 right-0 w-full max-w-sm h-screen bg-[#020408]/80 backdrop-blur-2xl border-l border-white/10 z-50 flex flex-col items-center justify-center shadow-2xl md:hidden"
+                                className="fixed inset-y-0 right-0 w-full max-w-sm h-screen bg-[#020408]/80 backdrop-blur-2xl border-l border-white/10 z-50 flex flex-col items-center justify-center shadow-2xl md:hidden relative"
                             >
+                                {/* Close Button inside Drawer */}
+                                <button
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="absolute top-6 right-6 p-2 text-white/50 hover:text-white transition-colors focus:outline-none"
+                                >
+                                    <X className="w-8 h-8" />
+                                </button>
+
                                 <div className="flex flex-col items-center gap-10 font-tech text-xl tracking-widest text-white uppercase w-full">
                                     <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Expertise</a>
                                     <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Sectors</a>
