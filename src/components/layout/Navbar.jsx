@@ -39,7 +39,7 @@ const Navbar = () => {
 
                 {/* Mobile Hamburger Button */}
                 <button
-                    className="md:hidden text-white z-50 relative"
+                    className="md:hidden text-white z-50 relative p-2 focus:outline-none"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
                     {isMobileMenuOpen ? <X className="w-8 h-8 text-blue-500" /> : <Menu className="w-8 h-8" />}
@@ -53,14 +53,14 @@ const Navbar = () => {
                             animate={{ x: 0 }}
                             exit={{ x: '100%' }}
                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                            className="fixed inset-0 bg-[#020408]/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 md:hidden"
+                            className="fixed inset-y-0 right-0 w-full md:w-[400px] h-screen bg-[#020408]/60 backdrop-blur-3xl border-l border-white/10 z-40 flex flex-col items-center justify-center shadow-2xl md:hidden"
                         >
-                            <div className="flex flex-col items-center gap-8 font-tech text-lg tracking-widest text-white uppercase">
-                                <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300">Expertise</a>
-                                <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300">Sectors</a>
-                                <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300">Network</a>
+                            <div className="flex flex-col items-center gap-10 font-tech text-xl tracking-widest text-white uppercase w-full">
+                                <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Expertise</a>
+                                <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Sectors</a>
+                                <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Network</a>
 
-                                <button className="border border-white/20 px-8 py-3 text-white hover:border-blue-500 hover:text-blue-400 transition-colors duration-300 clip-diagonal bg-blue-600/10" onClick={() => setIsMobileMenuOpen(false)}>
+                                <button className="border border-white/20 px-10 py-4 text-white hover:border-blue-500 hover:text-blue-400 transition-colors duration-300 clip-diagonal bg-blue-600/10 mt-6 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
                                     Become a Partner
                                 </button>
                             </div>
