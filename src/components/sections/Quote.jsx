@@ -9,8 +9,8 @@ const QuoteSection = () => {
             {/* Background */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg"
-                    alt="Abstract Concrete Architecture"
+                    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80"
+                    alt="Abstract Architecture"
                     className="w-full h-full object-cover filter grayscale contrast-125 opacity-10"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-[#020408] via-transparent to-[#020408]"></div>

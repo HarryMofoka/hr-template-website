@@ -9,7 +9,7 @@ const Hero = () => {
             {/* Background Video Placeholder (Image) */}
             <div className="absolute inset-0 w-full h-full z-0">
                 <img
-                    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2684&auto=format&fit=crop" // Changed to more corporate/people image
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80" // Corporate Team / Collaboration
                     alt="Corporate Team"
                     className="w-full h-full object-cover opacity-30 scale-105 animate-[pulse_10s_ease-in-out_infinite] filter contrast-125 saturate-0"
                 />
@@ -68,7 +68,7 @@ const Hero = () => {
                     >
                         <button className="group relative px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-tech uppercase tracking-widest text-sm transition-all duration-300 clip-diagonal overflow-hidden">
                             <span className="relative z-10 flex items-center gap-2">
-                                Talente Finden <ChevronRight className="w-4 h-4" />
+                                Find Talent <ChevronRight className="w-4 h-4" />
                             </span>
                             <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
                         </button>

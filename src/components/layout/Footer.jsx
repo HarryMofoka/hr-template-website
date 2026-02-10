@@ -30,20 +30,20 @@ const Footer = () => {
                     <div>
                         <h4 className="font-tech text-xs text-white uppercase tracking-widest mb-6">Navigation</h4>
                         <ul className="space-y-3 text-sm text-slate-500 font-light">
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Startseite</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Für Unternehmen</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Für Kandidaten</a></li>
+                            <li><a href="#" className="hover:text-blue-500 transition-colors">Home</a></li>
+                            <li><a href="#" className="hover:text-blue-500 transition-colors">For Companies</a></li>
+                            <li><a href="#" className="hover:text-blue-500 transition-colors">For Candidates</a></li>
                             <li><a href="#" className="hover:text-blue-500 transition-colors">Insights</a></li>
                         </ul>
                     </div>
 
                     {/* Col 3 */}
                     <div>
-                        <h4 className="font-tech text-xs text-white uppercase tracking-widest mb-6">Rechtliches</h4>
+                        <h4 className="font-tech text-xs text-white uppercase tracking-widest mb-6">Legal</h4>
                         <ul className="space-y-3 text-sm text-slate-500 font-light">
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Impressum</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Datenschutz</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">AGB</a></li>
+                            <li><a href="#" className="hover:text-blue-500 transition-colors">Imprint</a></li>
+                            <li><a href="#" className="hover:text-blue-500 transition-colors">Privacy</a></li>
+                            <li><a href="#" className="hover:text-blue-500 transition-colors">Terms</a></li>
                         </ul>
                     </div>
 
@@ -52,7 +52,7 @@ const Footer = () => {
                         <h4 className="font-tech text-xs text-white uppercase tracking-widest mb-6">Stay Connected</h4>
                         <form className="flex flex-col gap-4">
                             <div className="relative">
-                                <input type="email" placeholder="E-MAIL ADRESSE" className="w-full bg-[#0F1218] border border-white/10 p-3 pl-4 text-xs text-white focus:outline-none focus:border-blue-600 transition-colors placeholder-slate-600 font-tech tracking-wider uppercase" />
+                                <input type="email" placeholder="E-MAIL ADDRESS" className="w-full bg-[#0F1218] border border-white/10 p-3 pl-4 text-xs text-white focus:outline-none focus:border-blue-600 transition-colors placeholder-slate-600 font-tech tracking-wider uppercase" />
                             </div>
                             <button className="w-full bg-white text-black hover:bg-blue-600 hover:text-white transition-colors p-3 text-xs font-bold uppercase tracking-widest clip-diagonal">
                                 Subscribe
