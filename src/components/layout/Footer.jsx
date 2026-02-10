@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Network, Linkedin, Twitter } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -30,10 +31,10 @@ const Footer = () => {
                     <div>
                         <h4 className="font-tech text-xs text-white uppercase tracking-widest mb-6">Navigation</h4>
                         <ul className="space-y-3 text-sm text-slate-500 font-light">
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Home</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">For Companies</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">For Candidates</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Insights</a></li>
+                            <li><Link to="/" className="hover:text-blue-500 transition-colors">Home</Link></li>
+                            <li><Link to="/partner" className="hover:text-blue-500 transition-colors">For Companies</Link></li>
+                            <li><Link to="/sectors" className="hover:text-blue-500 transition-colors">For Candidates</Link></li>
+                            <li><Link to="/expertise" className="hover:text-blue-500 transition-colors">Insights</Link></li>
                         </ul>
                     </div>
 
@@ -41,9 +42,9 @@ const Footer = () => {
                     <div>
                         <h4 className="font-tech text-xs text-white uppercase tracking-widest mb-6">Legal</h4>
                         <ul className="space-y-3 text-sm text-slate-500 font-light">
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Imprint</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Privacy</a></li>
-                            <li><a href="#" className="hover:text-blue-500 transition-colors">Terms</a></li>
+                            <li><Link to="/imprint" className="hover:text-blue-500 transition-colors">Imprint</Link></li>
+                            <li><Link to="/privacy" className="hover:text-blue-500 transition-colors">Privacy</Link></li>
+                            <li><Link to="/terms" className="hover:text-blue-500 transition-colors">Terms</Link></li>
                         </ul>
                     </div>
 

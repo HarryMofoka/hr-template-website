@@ -1,33 +1,37 @@
 
-import React, { useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
-import Hero from './components/sections/Hero';
-import Stats from './components/sections/Stats';
-import Services from './components/sections/Services';
-import QuoteSection from './components/sections/Quote';
 import Footer from './components/layout/Footer';
-// import lucide from 'lucide'; // Removed unused import
+import Home from './pages/Home';
+import Expertise from './pages/Expertise';
+import Sectors from './pages/Sectors';
+import Network from './pages/Network';
+import Partner from './pages/Partner';
+import Legal from './pages/Legal';
 
 function App() {
-
-  // Noise overlay is handled in global CSS, but we can verify it renders here if needed.
-  // The structure matches existing body content from HTML.
-
   return (
-    <>
+    <Router>
       <div className="noise-overlay"></div>
 
       <Navbar />
 
-      <main>
-        <Hero />
-        <Stats />
-        <Services />
-        <QuoteSection />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/expertise" element={<Expertise />} />
+        <Route path="/sectors" element={<Sectors />} />
+        <Route path="/network" element={<Network />} />
+        <Route path="/partner" element={<Partner />} />
+
+        {/* Legal Routes */}
+        <Route path="/imprint" element={<Legal title="Imprint" />} />
+        <Route path="/privacy" element={<Legal title="Privacy Policy" />} />
+        <Route path="/terms" element={<Legal title="Terms & Conditions" />} />
+      </Routes>
 
       <Footer />
-    </>
+    </Router>
   );
 }
 
