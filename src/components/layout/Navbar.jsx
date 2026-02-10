@@ -17,6 +17,15 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Prevent scrolling when menu is open
+    useEffect(() => {
+        if (isMobileMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [isMobileMenuOpen]);
+
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 border-b border-white/5 transition-all duration-300 ${isScrolled ? 'bg-[#020408]/90 backdrop-blur-md' : 'bg-[#020408]/80 backdrop-blur-md'}`}>
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -48,23 +57,36 @@ const Navbar = () => {
                 {/* Mobile Menu Overlay */}
                 <AnimatePresence>
                     {isMobileMenuOpen && (
-                        <motion.div
-                            initial={{ x: '100%' }}
-                            animate={{ x: 0 }}
-                            exit={{ x: '100%' }}
-                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                            className="fixed inset-y-0 right-0 w-full md:w-[400px] h-screen bg-[#020408]/60 backdrop-blur-3xl border-l border-white/10 z-40 flex flex-col items-center justify-center shadow-2xl md:hidden"
-                        >
-                            <div className="flex flex-col items-center gap-10 font-tech text-xl tracking-widest text-white uppercase w-full">
-                                <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Expertise</a>
-                                <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Sectors</a>
-                                <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Network</a>
+                        <>
+                            {/* Backdrop Blur */}
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                                className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden"
+                                onClick={() => setIsMobileMenuOpen(false)}
+                            />
 
-                                <button className="border border-white/20 px-10 py-4 text-white hover:border-blue-500 hover:text-blue-400 transition-colors duration-300 clip-diagonal bg-blue-600/10 mt-6 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
-                                    Become a Partner
-                                </button>
-                            </div>
-                        </motion.div>
+                            {/* Sliding Menu */}
+                            <motion.div
+                                initial={{ x: '100%' }}
+                                animate={{ x: 0 }}
+                                exit={{ x: '100%' }}
+                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                className="fixed inset-y-0 right-0 w-full max-w-sm h-screen bg-[#020408]/80 backdrop-blur-2xl border-l border-white/10 z-50 flex flex-col items-center justify-center shadow-2xl md:hidden"
+                            >
+                                <div className="flex flex-col items-center gap-10 font-tech text-xl tracking-widest text-white uppercase w-full">
+                                    <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Expertise</a>
+                                    <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Sectors</a>
+                                    <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-blue-500 transition-colors duration-300 py-2">Network</a>
+
+                                    <button className="border border-white/20 px-10 py-4 text-white hover:border-blue-500 hover:text-blue-400 transition-colors duration-300 clip-diagonal bg-blue-600/10 mt-6 text-sm" onClick={() => setIsMobileMenuOpen(false)}>
+                                        Become a Partner
+                                    </button>
+                                </div>
+                            </motion.div>
+                        </>
                     )}
                 </AnimatePresence>
             </div>
