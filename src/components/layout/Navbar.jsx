@@ -49,10 +49,10 @@ const Navbar = () => {
                 <AnimatePresence>
                     {isMobileMenuOpen && (
                         <motion.div
-                            initial={{ opacity: 0, y: -20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -20 }}
-                            transition={{ duration: 0.3 }}
+                            initial={{ x: '100%' }}
+                            animate={{ x: 0 }}
+                            exit={{ x: '100%' }}
+                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
                             className="fixed inset-0 bg-[#020408]/95 backdrop-blur-xl z-40 flex flex-col items-center justify-center space-y-8 md:hidden"
                         >
                             <div className="flex flex-col items-center gap-8 font-tech text-lg tracking-widest text-white uppercase">
