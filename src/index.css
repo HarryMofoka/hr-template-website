@@ -4,7 +4,7 @@
 
 /* Tailwind v4 theme configuration via CSS variables */
 @theme {
-  --color-signal-orange: #FF3D00;
+  --color-signal-blue: #3B82F6;
   --color-deep-navy: #020408;
   --color-panel-gray: #0F1218;
 
@@ -13,7 +13,7 @@
 }
 
 :root {
-  --signal-orange: #FF3D00;
+  --signal-blue: #3B82F6;
   --deep-navy: #020408;
   --panel-gray: #0F1218;
 }
@@ -62,7 +62,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--signal-orange);
+  background: var(--signal-blue);
 }
 
 /* Magnetic Button Glow - logic to be handled in component, but base styles here */
