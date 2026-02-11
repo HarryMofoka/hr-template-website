@@ -79,9 +79,9 @@ const Navbar = () => {
 
                             {/* Sliding Menu - Full Width */}
                             <motion.div
-                                initial={{ x: '100%' }}
-                                animate={{ x: 0 }}
-                                exit={{ x: '100%' }}
+                                initial={{ y: '-100%' }}
+                                animate={{ y: 0 }}
+                                exit={{ y: '-100%' }}
                                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
                                 className="fixed inset-0 w-full bg-[#020408]/98 backdrop-blur-xl z-50 flex flex-col items-center justify-start pt-32 pb-10 overflow-y-auto md:hidden"
                             >
