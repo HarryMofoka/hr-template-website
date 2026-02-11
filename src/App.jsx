@@ -8,7 +8,12 @@ import Expertise from './pages/Expertise';
 import Sectors from './pages/Sectors';
 import Network from './pages/Network';
 import Partner from './pages/Partner';
-import Legal from './pages/Legal';
+import Imprint from './pages/Imprint';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+import Candidates from './pages/Candidates';
+import Companies from './pages/Companies';
+import Insights from './pages/Insights';
 
 function App() {
   return (
@@ -19,15 +24,22 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+
+        {/* Main Nav Routes */}
         <Route path="/expertise" element={<Expertise />} />
         <Route path="/sectors" element={<Sectors />} />
         <Route path="/network" element={<Network />} />
         <Route path="/partner" element={<Partner />} />
 
+        {/* Dedicated Footer Nav Routes */}
+        <Route path="/candidates" element={<Candidates />} />
+        <Route path="/companies" element={<Companies />} />
+        <Route path="/insights" element={<Insights />} />
+
         {/* Legal Routes */}
-        <Route path="/imprint" element={<Legal title="Imprint" />} />
-        <Route path="/privacy" element={<Legal title="Privacy Policy" />} />
-        <Route path="/terms" element={<Legal title="Terms & Conditions" />} />
+        <Route path="/imprint" element={<Imprint />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/terms" element={<Terms />} />
       </Routes>
 
       <Footer />
