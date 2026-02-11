@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { Network, Menu, X } from 'lucide-react';
 import MagneticButton from '../ui/MagneticButton';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -63,49 +64,43 @@ const Navbar = () => {
                     {isMobileMenuOpen ? <X className="w-8 h-8 text-blue-500" /> : <Menu className="w-8 h-8" />}
                 </button>
 
-                {/* Mobile Menu Overlay */}
-                <AnimatePresence>
-                    {isMobileMenuOpen && (
-                        <>
-                            {/* Backdrop Blur (Optional now if menu is full screen, but good for layers) */}
-                            <motion.div
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.3 }}
-                                className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                            />
+                {/* Mobile Menu Overlay - Move to Portal */}
+                {createPortal(
+                    <AnimatePresence>
+                        {isMobileMenuOpen && (
+                            <>
+                                {/* Backdrop (Optional if menu is full screen opaque) */}
 
-                            {/* Sliding Menu - Full Width */}
-                            <motion.div
-                                initial={{ y: '-100%' }}
-                                animate={{ y: 0 }}
-                                exit={{ y: '-100%' }}
-                                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                className="fixed inset-0 w-full bg-[#020408]/98 backdrop-blur-xl z-50 flex flex-col items-center justify-start pt-32 pb-10 overflow-y-auto md:hidden"
-                            >
-                                {/* Close Button inside Drawer */}
-                                <button
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                    className="absolute top-6 right-6 p-2 text-white/50 hover:text-white transition-colors focus:outline-none"
+                                <motion.div
+                                    initial={{ y: '-100%' }}
+                                    animate={{ y: 0 }}
+                                    exit={{ y: '-100%' }}
+                                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                    className="fixed inset-0 w-full h-[100dvh] bg-[#020408] z-[100] flex flex-col items-center justify-start pt-32 pb-10 overflow-y-auto md:hidden"
                                 >
-                                    <X className="w-8 h-8" />
-                                </button>
-
-                                <div className="flex flex-col items-center gap-10 font-tech text-xl tracking-widest text-white uppercase w-full">
-                                    <button onClick={() => handleNavigation('/expertise')} className="hover:text-blue-500 transition-colors duration-300 py-2">Expertise</button>
-                                    <button onClick={() => handleNavigation('/sectors')} className="hover:text-blue-500 transition-colors duration-300 py-2">Sectors</button>
-                                    <button onClick={() => handleNavigation('/network')} className="hover:text-blue-500 transition-colors duration-300 py-2">Network</button>
-
-                                    <button onClick={() => handleNavigation('/partner')} className="border border-white/20 px-10 py-4 text-white hover:border-blue-500 hover:text-blue-400 transition-colors duration-300 clip-diagonal bg-blue-600/10 mt-6 text-sm">
-                                        Become a Partner
+                                    {/* Close Button inside Drawer - redundant if X uses isMobileMenuOpen toggle from Nav, but useful for UX */}
+                                    <button
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                        className="absolute top-6 right-6 p-2 text-white/50 hover:text-white transition-colors focus:outline-none"
+                                    >
+                                        <X className="w-8 h-8" />
                                     </button>
-                                </div>
-                            </motion.div>
-                        </>
-                    )}
-                </AnimatePresence>
+
+                                    <div className="flex flex-col items-center gap-10 font-tech text-xl tracking-widest text-white uppercase w-full">
+                                        <button onClick={() => handleNavigation('/expertise')} className="hover:text-blue-500 transition-colors duration-300 py-2">Expertise</button>
+                                        <button onClick={() => handleNavigation('/sectors')} className="hover:text-blue-500 transition-colors duration-300 py-2">Sectors</button>
+                                        <button onClick={() => handleNavigation('/network')} className="hover:text-blue-500 transition-colors duration-300 py-2">Network</button>
+
+                                        <button onClick={() => handleNavigation('/partner')} className="border border-white/20 px-10 py-4 text-white hover:border-blue-500 hover:text-blue-400 transition-colors duration-300 clip-diagonal bg-blue-600/10 mt-6 text-sm">
+                                            Become a Partner
+                                        </button>
+                                    </div>
+                                </motion.div>
+                            </>
+                        )}
+                    </AnimatePresence>,
+                    document.body
+                )}
             </div>
         </nav>
     );
