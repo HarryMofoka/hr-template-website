@@ -15,9 +15,12 @@ import Candidates from './pages/Candidates';
 import Companies from './pages/Companies';
 import Insights from './pages/Insights';
 
+import ScrollToTop from './components/utils/ScrollToTop';
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="noise-overlay"></div>
 
       <Navbar />
