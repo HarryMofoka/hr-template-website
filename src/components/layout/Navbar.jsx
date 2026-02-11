@@ -67,23 +67,23 @@ const Navbar = () => {
                 <AnimatePresence>
                     {isMobileMenuOpen && (
                         <>
-                            {/* Backdrop Blur */}
+                            {/* Backdrop Blur (Optional now if menu is full screen, but good for layers) */}
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.3 }}
-                                className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 md:hidden"
+                                className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             />
 
-                            {/* Sliding Menu */}
+                            {/* Sliding Menu - Full Width */}
                             <motion.div
                                 initial={{ x: '100%' }}
                                 animate={{ x: 0 }}
                                 exit={{ x: '100%' }}
                                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                className="fixed inset-y-0 right-0 w-full max-w-sm h-screen bg-[#020408]/80 backdrop-blur-2xl border-l border-white/10 z-50 flex flex-col items-center justify-center shadow-2xl md:hidden relative"
+                                className="fixed inset-0 w-full h-screen bg-[#020408]/95 backdrop-blur-3xl z-50 flex flex-col items-center justify-center md:hidden relative"
                             >
                                 {/* Close Button inside Drawer */}
                                 <button
