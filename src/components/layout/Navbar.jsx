@@ -83,7 +83,7 @@ const Navbar = () => {
                                 animate={{ x: 0 }}
                                 exit={{ x: '100%' }}
                                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                className="fixed inset-0 w-full h-screen bg-[#020408]/95 backdrop-blur-3xl z-50 flex flex-col items-center justify-center md:hidden relative"
+                                className="fixed inset-0 w-full bg-[#020408]/95 backdrop-blur-3xl z-50 flex flex-col items-center justify-center md:hidden"
                             >
                                 {/* Close Button inside Drawer */}
                                 <button
