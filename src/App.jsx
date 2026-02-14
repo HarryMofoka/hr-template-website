@@ -14,6 +14,7 @@ import Terms from './pages/Terms';
 import Candidates from './pages/Candidates';
 import Companies from './pages/Companies';
 import Insights from './pages/Insights';
+import JobDetail from './pages/JobDetail';
 
 import ScrollToTop from './components/utils/ScrollToTop';
 
@@ -38,6 +39,7 @@ function App() {
         <Route path="/candidates" element={<Candidates />} />
         <Route path="/companies" element={<Companies />} />
         <Route path="/insights" element={<Insights />} />
+        <Route path="/jobs/:id" element={<JobDetail />} />
 
         {/* Legal Routes */}
         <Route path="/imprint" element={<Imprint />} />

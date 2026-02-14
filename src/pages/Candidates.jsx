@@ -3,6 +3,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HardHat, Truck, Code } from 'lucide-react';
 
+import jobs from '../data/jobs.json';
+import JobCard from '../components/jobs/JobCard';
+
 const Candidates = () => {
     return (
         <div className="pt-20">
@@ -37,7 +40,7 @@ const Candidates = () => {
             </section>
 
             {/* Sectors / Opportunities List */}
-            <section className="py-24 max-w-7xl mx-auto px-6 space-y-24">
+            <section className="py-24 max-w-7xl mx-auto px-6 space-y-24 border-b border-white/5">
                 {/* Tech */}
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
@@ -100,6 +103,25 @@ const Candidates = () => {
                         <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Logistics" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" />
                     </div>
                 </motion.div>
+            </section>
+
+            {/* Job Board Section */}
+            <section className="py-24 max-w-7xl mx-auto px-6" id="open-positions">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-16 text-center"
+                >
+                    <span className="font-tech text-xs text-blue-500 tracking-[0.3em] uppercase mb-4 block">Current Opportunities</span>
+                    <h2 className="text-4xl md:text-5xl font-semibold text-white tracking-tight uppercase">Open Positions</h2>
+                </motion.div>
+
+                <div className="grid grid-cols-1 gap-6">
+                    {jobs.map((job, index) => (
+                        <JobCard key={job.id} job={job} index={index} />
+                    ))}
+                </div>
             </section>
         </div>
     );

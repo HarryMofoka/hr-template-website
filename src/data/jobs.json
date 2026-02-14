@@ -1,0 +1,64 @@
+[
+    {
+        "id": "senior-react-developer",
+        "title": "Senior React Developer",
+        "location": "Sandton, Johannesburg",
+        "type": "Full-time",
+        "department": "Engineering",
+        "salary": "R900k - R1.2m per annum",
+        "description": "We are looking for an experienced React Developer to lead our frontend team. You will be responsible for architecting and building scalable web applications for our enterprise clients.",
+        "requirements": [
+            "5+ years of experience with React and modern JavaScript",
+            "Experience with TypeScript and Tailwind CSS",
+            "Strong understanding of state management (Redux, Zustand, or Context)",
+            "Experience with Next.js is a plus",
+            "South African citizenship or valid work permit"
+        ]
+    },
+    {
+        "id": "civil-engineer-manager",
+        "title": "Civil Engineering Manager",
+        "location": "Cape Town, Western Cape",
+        "type": "Contract",
+        "department": "Construction",
+        "salary": "Competitive Market Related",
+        "description": "Leading valid construction firm seeks a Civil Engineering Manager for a major infrastructure project. You will oversee site operations, ensure compliance with safety regulations, and manage a team of 20+ engineers.",
+        "requirements": [
+            "BSc in Civil Engineering",
+            "ECSA Professional Registration (Pr Eng)",
+            "10+ years of experience in large-scale infrastructure projects",
+            "Strong project management skills",
+            "Willingness to travel"
+        ]
+    },
+    {
+        "id": "logistics-coordinator",
+        "title": "Logistics Coordinator",
+        "location": "Durban, KZN",
+        "type": "Full-time",
+        "department": "Logistics",
+        "salary": "R350k - R450k per annum",
+        "description": "Join a fast-paced logistics company as a Coordinator. You will be responsible for managing fleet schedules, optimizing routes, and ensuring timely deliveries across the KZN region.",
+        "requirements": [
+            "Diploma/Degree in Logistics or Supply Chain Management",
+            "3+ years of experience in fleet management",
+            "Proficiency with tracking software",
+            "Excellent communication and problem-solving skills"
+        ]
+    },
+    {
+        "id": "ux-ui-designer",
+        "title": "UX/UI Designer",
+        "location": "Remote (SA based)",
+        "type": "Full-time",
+        "department": "Design",
+        "salary": "R500k - R700k per annum",
+        "description": "We need a creative UX/UI Designer to craft intuitive and beautiful user interfaces. You will work closely with our product and engineering teams to deliver exceptional digital experiences.",
+        "requirements": [
+            "Portfolio demonstrating strong UI and UX skills",
+            "Proficiency in Figma and Adobe Creative Suite",
+            "Understanding of responsive design principles",
+            "Experience working in an Agile environment"
+        ]
+    }
+]
