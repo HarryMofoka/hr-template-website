@@ -28,7 +28,14 @@ const Privacy = () => {
 
                 <h2 className="text-xl text-white font-semibold mt-6">3. General Information and Mandatory Information</h2>
                 <p>
-                    The operators of this website and its pages take the protection of your personal data very seriously. We treat your personal data as confidential and in compliance with the statutory data protection regulations and this Data Protection Declaration.
+                    The operators of this website and its pages take the protection of your personal data very seriously. We treat your personal data as confidential and in compliance with the Protection of Personal Information Act (POPIA) and this Data Protection Declaration.
+                </p>
+                <p className="mt-4">
+                    <strong>Responsible Body:</strong><br />
+                    For The People (Pty) Ltd<br />
+                    123 Rivonia Road<br />
+                    Sandton, Johannesburg, 2196<br />
+                    South Africa
                 </p>
 
                 <div className="h-px w-full bg-white/10 my-8"></div>

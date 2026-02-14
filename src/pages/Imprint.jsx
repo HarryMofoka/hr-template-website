@@ -14,31 +14,30 @@ const Imprint = () => {
             </motion.h1>
             <div className="text-slate-400 space-y-6 leading-relaxed">
                 <p>
-                    <strong>For The People GmbH</strong><br />
-                    123 Innovation Drive<br />
-                    Tech City, TC 90210<br />
-                    United States
+                    <strong>For The People (Pty) Ltd</strong><br />
+                    123 Rivonia Road<br />
+                    Sandton, Johannesburg, 2196<br />
+                    South Africa
                 </p>
                 <p>
                     <strong>Represented by:</strong><br />
-                    John Doe, CEO<br />
-                    Jane Smith, COO
+                    Sipho Nkosi, CEO<br />
+                    Willem de Villiers, COO
                 </p>
                 <p>
                     <strong>Contact:</strong><br />
-                    Phone: +1 (555) 123-4567<br />
-                    Email: contact@forthepeople.com
+                    Phone: +27 10 123 4567<br />
+                    Email: contact@forthepeople.co.za
                 </p>
                 <p>
                     <strong>Register Entry:</strong><br />
-                    Entry in the Commercial Register.<br />
-                    Registering Court: District Court of Tech City<br />
-                    Registration Number: HRB 12345
+                    Registered with the Companies and Intellectual Property Commission (CIPC).<br />
+                    Registration Number: 2026/123456/07
                 </p>
                 <p>
                     <strong>VAT ID:</strong><br />
-                    Sales tax identification number according to Sect. 27 a of the Sales Tax Law:<br />
-                    US 123 456 789
+                    Value Added Tax identification number according to South African Revenue Service:<br />
+                    4900123456
                 </p>
                 <div className="h-px w-full bg-white/10 my-8"></div>
                 <p className="text-sm">

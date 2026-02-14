@@ -44,14 +44,14 @@ const Companies = () => {
                                 <Mail className="text-blue-500 w-6 h-6 mt-1" />
                                 <div>
                                     <h4 className="text-white font-semibold uppercase mb-1">Email Us</h4>
-                                    <p className="text-slate-400">companies@forthepeople.com</p>
+                                    <p className="text-slate-400">companies@forthepeople.co.za</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-6">
                                 <Phone className="text-blue-500 w-6 h-6 mt-1" />
                                 <div>
                                     <h4 className="text-white font-semibold uppercase mb-1">Call Us</h4>
-                                    <p className="text-slate-400">+1 (555) 987-6543</p>
+                                    <p className="text-slate-400">+27 10 987 6543</p>
                                 </div>
                             </div>
                         </div>

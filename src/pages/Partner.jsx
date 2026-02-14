@@ -44,14 +44,14 @@ const Partner = () => {
                                 <Mail className="text-blue-500 w-6 h-6 mt-1" />
                                 <div>
                                     <h4 className="text-white font-semibold uppercase mb-1">Email Us</h4>
-                                    <p className="text-slate-400">contact@forthepeople.com</p>
+                                    <p className="text-slate-400">contact@forthepeople.co.za</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-6">
                                 <Phone className="text-blue-500 w-6 h-6 mt-1" />
                                 <div>
                                     <h4 className="text-white font-semibold uppercase mb-1">Call Us</h4>
-                                    <p className="text-slate-400">+1 (555) 123-4567</p>
+                                    <p className="text-slate-400">+27 10 123 4567</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-6">
@@ -59,8 +59,8 @@ const Partner = () => {
                                 <div>
                                     <h4 className="text-white font-semibold uppercase mb-1">Headquarters</h4>
                                     <p className="text-slate-400">
-                                        123 Innovation Drive, <br />
-                                        Tech City, TC 90210
+                                        123 Rivonia Road, <br />
+                                        Sandton, Johannesburg, 2196
                                     </p>
                                 </div>
                             </div>

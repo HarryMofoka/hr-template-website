@@ -28,6 +28,11 @@ const Terms = () => {
                     The materials on For The People's website are provided on an 'as is' basis. For The People makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
                 </p>
 
+                <h2 className="text-xl text-white font-semibold mt-6">4. Governing Law</h2>
+                <p>
+                    These terms and conditions are governed by and construed in accordance with the laws of South Africa and you irrevocably submit to the exclusive jurisdiction of the courts in Johannesburg.
+                </p>
+
                 <div className="h-px w-full bg-white/10 my-8"></div>
                 <p className="text-sm">
                     &copy; 2026 For The People. All rights reserved.
